@@ -1,0 +1,11 @@
+URL: svn://tug.org/texhyphen/trunk/hyph-utf8/tex/generic/hyph-utf8/patterns/txt/@689
+Version: r689
+License: notice
+License File: NOTICE
+
+Description:
+Hyphenation patterns for automatic hyphenation from TeX hyphenation
+patterns project at http://tug.org/tex-hyphen/.
+
+Local Modifications:
+Only the US English pattern is included.
