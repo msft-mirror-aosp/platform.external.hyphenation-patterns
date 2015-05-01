@@ -16,8 +16,13 @@
 # PRODUCT_COPY_FILES to install the pattern files, so that the NOTICE file can
 # get installed too.
 
+pattern_locales := \
+    en-us eu hu hy \
+    nb nn sa und-ethi
+
 PRODUCT_PACKAGES := \
-    hyph-en-us.chr.txt \
-    hyph-en-us.hyp.txt \
-    hyph-en-us.lic.txt \
-    hyph-en-us.pat.txt
+    $(foreach locale, $(pattern_locales), \
+        $(addprefix hyph-, $(addprefix $(locale), \
+            .chr.txt .hyp.txt .lic.txt .pat.txt)))
+
+pattern_locales :=

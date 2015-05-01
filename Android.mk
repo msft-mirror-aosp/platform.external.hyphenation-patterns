@@ -12,18 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# We have to use BUILD_PREBUILT instead of PRODUCT_COPY_FILES,
-# to copy over the NOTICE file.
+HYPHENS_DIR := $(call my-dir)
 
-LOCAL_PATH := $(call my-dir)
-
-pattern_locales := en-us
+pattern_locales := \
+    en-US/en-us \
+    Ethi/und-ethi \
+    eu/eu \
+    hu/hu \
+    hy/hy \
+    nb/nb \
+    nn/nn \
+    sa/sa
 
 pattern_src_files := \
     $(foreach locale, $(pattern_locales), \
-        $(addprefix hyph-, $(addprefix $(locale), \
-            .chr.txt .hyp.txt .lic.txt .pat.txt)))
+        $(addprefix $(dir $(locale)), \
+            $(addprefix hyph-, $(addprefix $(notdir $(locale)), \
+                .chr.txt .hyp.txt .lic.txt .pat.txt))))
 pattern_locales :=
+
+# We have to use BUILD_PREBUILT instead of PRODUCT_COPY_FILES,
+# to copy over the NOTICE file.
 
 #############################################################################
 # $(1): The source file name in LOCAL_PATH.
@@ -31,8 +40,9 @@ pattern_locales :=
 #############################################################################
 define build-one-pattern-module
 $(eval include $(CLEAR_VARS))\
-$(eval LOCAL_MODULE := $(1))\
-$(eval LOCAL_SRC_FILES := $(1))\
+$(eval LOCAL_PATH := $(abspath $(addprefix $(HYPHENS_DIR)/, $(dir $(1)))))\
+$(eval LOCAL_MODULE := $(notdir $(1)))\
+$(eval LOCAL_SRC_FILES := $(notdir $(1)))\
 $(eval LOCAL_MODULE_CLASS := ETC)\
 $(eval LOCAL_MODULE_TAGS := optional)\
 $(eval LOCAL_MODULE_PATH := $(TARGET_OUT)/usr/hyphen-data)\
@@ -42,3 +52,4 @@ endef
 $(foreach f, $(pattern_src_files), $(call build-one-pattern-module, $(f)))
 build-one-pattern-module :=
 pattern_src_files :=
+HYPHENS_DIR :=
