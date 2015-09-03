@@ -12,17 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# We have to use PRODUCT_PACKAGES (together with BUILD_PREBUILT) instead of
+# We have to use PRODUCT_PACKAGES (together with BUILD_HYPH) instead of
 # PRODUCT_COPY_FILES to install the pattern files, so that the NOTICE file can
 # get installed too.
 
 pattern_locales := \
     en-us eu hu hy \
-    nb nn sa und-ethi
+    nb nn und-ethi
 
-PRODUCT_PACKAGES := \
-    $(foreach locale, $(pattern_locales), \
-        $(addprefix hyph-, $(addprefix $(locale), \
-            .chr.txt .hyp.txt .lic.txt .pat.txt)))
+PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \
+    $(addsuffix .lic.txt,$(addprefix hyph-,$(pattern_locales)))
 
 pattern_locales :=
