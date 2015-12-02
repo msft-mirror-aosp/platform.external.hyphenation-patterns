@@ -1,5 +1,5 @@
-URL: svn://tug.org/texhyphen/trunk/hyph-utf8/tex/generic/hyph-utf8/patterns/txt/@689
-Version: r689
+URL: svn://tug.org/texhyphen/trunk/hyph-utf8/tex/generic/hyph-utf8/patterns/txt/@706
+Version: r706
 License: various
 License File: NOTICE
 
@@ -16,6 +16,7 @@ Only the following patterns are included:
 * Norwegian Bokmål (nb)
 * Norwegian Nynorsk (nn) 
 * Sanskrit (sa)
+* Spanish (es)
 * US English (en-US)
 
 The Ethiopic script pattern files have been renamed from mul-ethi to

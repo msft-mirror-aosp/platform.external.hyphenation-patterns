@@ -17,7 +17,7 @@
 # get installed too.
 
 pattern_locales := \
-    en-us eu hu hy \
+    en-us es eu hu hy \
     nb nn und-ethi
 
 PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \
