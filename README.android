@@ -1,5 +1,5 @@
-URL: svn://tug.org/texhyphen/trunk/hyph-utf8/tex/generic/hyph-utf8/patterns/txt/@706
-Version: r706
+URL: svn://tug.org/texhyphen/trunk/hyph-utf8/tex/generic/hyph-utf8/patterns/txt/@708
+Version: r708
 License: various
 License File: NOTICE
 
@@ -15,9 +15,13 @@ Only the following patterns are included:
 * Hungarian (hu)
 * Norwegian Bokmål (nb)
 * Norwegian Nynorsk (nn) 
+* Portuguese (pt)
 * Sanskrit (sa)
 * Spanish (es)
 * US English (en-US)
 
 The Ethiopic script pattern files have been renamed from mul-ethi to
 und-ethi, to properly follow BCP 47 naming.
+
+German patterns are taken from a different upstream. Please see the
+README.android file in the 'de' directory for further details.

@@ -15,6 +15,9 @@
 LOCAL_PATH := $(call my-dir)
 
 pattern_locales := \
+    de/de-1901 \
+    de/de-1996 \
+    de/de-ch-1901 \
     en-US/en-us \
     es/es \
     Ethi/und-ethi \
@@ -22,7 +25,8 @@ pattern_locales := \
     hu/hu \
     hy/hy \
     nb/nb \
-    nn/nn
+    nn/nn \
+    pt/pt
 
 # TODO: we have data for sa/sa, but it requires special case handling for case
 # folding and normalization, so don't build it until that's fixed.
