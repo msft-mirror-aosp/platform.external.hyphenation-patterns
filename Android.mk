@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#disable build in PDK
+ifneq ($(TARGET_BUILD_PDK),true)
+
 LOCAL_PATH := $(call my-dir)
 
 pattern_locales := \
@@ -55,3 +58,5 @@ endef
 $(foreach l, $(pattern_locales), $(call build-one-pattern-module, $(dir $(l)), $(notdir $l)))
 build-one-pattern-module :=
 pattern_locales :=
+
+endif #TARGET_BUILD_PDK
