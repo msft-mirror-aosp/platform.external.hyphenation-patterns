@@ -18,7 +18,7 @@
 
 pattern_locales := \
     de-1901 de-1996 de-ch-1901 \
-    en-us es eu hu hy \
+    en-us es hu hy \
     nb nn pt und-ethi
 
 PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \

@@ -24,7 +24,6 @@ pattern_locales := \
     en-US/en-us \
     es/es \
     Ethi/und-ethi \
-    eu/eu \
     hu/hu \
     hy/hy \
     nb/nb \
