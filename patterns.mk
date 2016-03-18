@@ -17,9 +17,39 @@
 # get installed too.
 
 pattern_locales := \
-    de-1901 de-1996 de-ch-1901 \
-    en-us es hu hy \
-    nb nn pt und-ethi
+    as \
+    bn \
+    cy \
+    da \
+    de-1901 \
+    de-1996 \
+    de-ch-1901 \
+    en-gb \
+    en-us \
+    es \
+    et \
+    eu \
+    fr \
+    ga \
+    gu \
+    hi \
+    hr \
+    hu \
+    hy \
+    kn \
+    ml \
+    mn-cyrl \
+    mr \
+    nb \
+    nn \
+    or \
+    pa \
+    pt \
+    sl \
+    ta \
+    te \
+    tk \
+    und-ethi
 
 PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \
     $(addsuffix .lic.txt,$(addprefix hyph-,$(pattern_locales)))

@@ -18,17 +18,39 @@ ifneq ($(TARGET_BUILD_PDK),true)
 LOCAL_PATH := $(call my-dir)
 
 pattern_locales := \
+    as/as \
+    bn/bn \
+    cy/cy \
+    da/da \
     de/de-1901 \
     de/de-1996 \
     de/de-ch-1901 \
+    en-GB/en-gb \
     en-US/en-us \
     es/es \
+    et/et \
+    eu/eu \
     Ethi/und-ethi \
+    fr/fr \
+    ga/ga \
+    gu/gu \
+    hi/hi \
+    hr/hr \
     hu/hu \
     hy/hy \
+    kn/kn \
+    ml/ml \
+    mn/mn-cyrl \
+    mr/mr \
     nb/nb \
     nn/nn \
-    pt/pt
+    or/or \
+    pa/pa \
+    pt/pt \
+    sl/sl \
+    ta/ta \
+    te/te \
+    tk/tk
 
 # TODO: we have data for sa/sa, but it requires special case handling for case
 # folding and normalization, so don't build it until that's fixed.
