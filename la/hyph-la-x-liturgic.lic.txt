@@ -1,10 +1,15 @@
-% copyright: Copyright (c) 2016 Aleksandr Andreev and Mike Kroutikov
-% title: Hyphenation patterns for Church Slavonic
-% version: 1.1
-% notice: >
-%     This file is part of the hyph-utf8 package.
-%     See http://www.hyphenation.org for more information.
+% copyright: Copyright (C) Claudio Beccari, 2016
+% title: Hyphenation patterns for Liturgical Latin
+% version: 1.040 2016-05-19
+% language:
+%     name: Liturgical Latin
+%     code: la-x-liturgic
+% notice: This file is part of the hyph-utf8 package. See http://www.hyphenation.org for more information.
+% authors:
+%   -
+%     name: Claudio Beccari
 % licence:
+%   -
 %     name: MIT
 %     url: https://opensource.org/licenses/MIT
 %     text: >
