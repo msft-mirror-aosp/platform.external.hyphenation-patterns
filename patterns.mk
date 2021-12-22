@@ -17,7 +17,6 @@
 # get installed too.
 
 pattern_locales := \
-    am \
     as \
     be \
     bg \
@@ -48,6 +47,7 @@ pattern_locales := \
     ml \
     mn-cyrl \
     mr \
+    mul-ethi \
     nb \
     nn \
     or \
