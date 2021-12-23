@@ -34,16 +34,20 @@ pattern_locales := \
     eu \
     fr \
     ga \
+    gl \
     gu \
     hi \
     hr \
     hu \
     hy \
+    it \
     kn \
     la \
+    lt \
     ml \
     mn-cyrl \
     mr \
+    mul-ethi \
     nb \
     nn \
     or \
@@ -53,6 +57,7 @@ pattern_locales := \
     ta \
     te \
     tk \
+    uk \
     und-ethi
 
 PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \
