@@ -18,17 +18,20 @@ ifneq ($(TARGET_BUILD_PDK),true)
 LOCAL_PATH := $(call my-dir)
 
 pattern_locales := \
+    af/af \
     am/mul-ethi \
     as/as \
     be/be \
     bn/bn \
     bg/bg \
+    cs/cs \
     cu/cu \
     cy/cy \
     da/da \
     de/de-1901 \
     de/de-1996 \
     de/de-ch-1901 \
+    el/el \
     en-GB/en-gb \
     en-US/en-us \
     es/es \
@@ -44,18 +47,23 @@ pattern_locales := \
     hu/hu \
     hy/hy \
     it/it \
+    ka/ka \
     kn/kn \
     la/la \
     lt/lt \
+    lv/lv \
     ml/ml \
     mn/mn-cyrl \
     mr/mr \
     nb/nb \
+    nl/nl \
     nn/nn \
     or/or \
     pa/pa \
     pt/pt \
+    sk/sk \
     sl/sl \
+    sq/sq \
     ta/ta \
     te/te \
     tk/tk \
