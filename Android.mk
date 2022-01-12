@@ -64,6 +64,7 @@ pattern_locales := \
     sk/sk \
     sl/sl \
     sq/sq \
+    sv/sv \
     ta/ta \
     te/te \
     tk/tk \
