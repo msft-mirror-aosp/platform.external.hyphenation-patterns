@@ -62,6 +62,7 @@ pattern_locales := \
     sk \
     sl \
     sq \
+    sv \
     ta \
     te \
     tk \
