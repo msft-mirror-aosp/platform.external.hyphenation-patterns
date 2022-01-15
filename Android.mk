@@ -87,6 +87,9 @@ define build-one-pattern-module
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix hyph-, $(2)))\
 $(eval LOCAL_SRC_FILES := $(addprefix $(1)/hyph-, $(addprefix $(2), .pat.txt .chr.txt .hyp.txt)))\
+$(eval LOCAL_LICENSE_KINDS := SPDX-license-identifier-MIT SPDX-license-identifier-BSD SPDX-license-identifier-GPL-2.0 SPDX-license-identifier-MPL)\
+$(eval LOCAL_LICENSE_CONDITIONS := notice)\
+$(eval LOCAL_NOTICE_FILE := $(wildcard $(addprefix $(LOCAL_PATH)/$(1), /NOTICE)))\
 $(eval include $(BUILD_HYB))\
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix $(addprefix hyph-, $(2)), .lic.txt))\
