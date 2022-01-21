@@ -61,6 +61,7 @@ pattern_locales := \
     or/or \
     pa/pa \
     pt/pt \
+    ru/ru \
     sk/sk \
     sl/sl \
     sq/sq \

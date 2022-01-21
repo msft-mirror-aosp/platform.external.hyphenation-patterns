@@ -59,6 +59,7 @@ pattern_locales := \
     or \
     pa \
     pt \
+    ru \
     sk \
     sl \
     sq \
