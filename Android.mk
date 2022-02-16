@@ -18,20 +18,16 @@ ifneq ($(TARGET_BUILD_PDK),true)
 LOCAL_PATH := $(call my-dir)
 
 pattern_locales := \
-    af/af \
-    am/mul-ethi \
     as/as \
     be/be \
     bn/bn \
     bg/bg \
-    cs/cs \
     cu/cu \
     cy/cy \
     da/da \
     de/de-1901 \
     de/de-1996 \
     de/de-ch-1901 \
-    el/el \
     en-GB/en-gb \
     en-US/en-us \
     es/es \
@@ -40,36 +36,25 @@ pattern_locales := \
     Ethi/und-ethi \
     fr/fr \
     ga/ga \
-    gl/gl \
     gu/gu \
     hi/hi \
     hr/hr \
     hu/hu \
     hy/hy \
-    it/it \
-    ka/ka \
     kn/kn \
     la/la \
-    lt/lt \
-    lv/lv \
     ml/ml \
     mn/mn-cyrl \
     mr/mr \
     nb/nb \
-    nl/nl \
     nn/nn \
     or/or \
     pa/pa \
     pt/pt \
-    ru/ru \
-    sk/sk \
     sl/sl \
-    sq/sq \
-    sv/sv \
     ta/ta \
     te/te \
-    tk/tk \
-    uk/uk
+    tk/tk
 
 # TODO: we have data for sa/sa, but it requires special case handling for case
 # folding and normalization, so don't build it until that's fixed.
@@ -88,9 +73,6 @@ define build-one-pattern-module
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix hyph-, $(2)))\
 $(eval LOCAL_SRC_FILES := $(addprefix $(1)/hyph-, $(addprefix $(2), .pat.txt .chr.txt .hyp.txt)))\
-$(eval LOCAL_LICENSE_KINDS := SPDX-license-identifier-MIT SPDX-license-identifier-BSD SPDX-license-identifier-GPL-2.0 SPDX-license-identifier-MPL)\
-$(eval LOCAL_LICENSE_CONDITIONS := notice)\
-$(eval LOCAL_NOTICE_FILE := $(wildcard $(addprefix $(LOCAL_PATH)/$(1), /NOTICE)))\
 $(eval include $(BUILD_HYB))\
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix $(addprefix hyph-, $(2)), .lic.txt))\
