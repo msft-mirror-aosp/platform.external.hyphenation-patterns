@@ -73,6 +73,9 @@ define build-one-pattern-module
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix hyph-, $(2)))\
 $(eval LOCAL_SRC_FILES := $(addprefix $(1)/hyph-, $(addprefix $(2), .pat.txt .chr.txt .hyp.txt)))\
+$(eval LOCAL_LICENSE_KINDS := SPDX-license-identifier-MIT SPDX-license-identifier-BSD-3-Clause SPDX-license-identifier-FSFAP SPDX-license-identifier-Unicode-DFS SPDX-license-identifier-LGPL-2.1 SPDX-license-identifier-MPL)\
+$(eval LOCAL_LICENSE_CONDITIONS := notice reciprocal restricted)\
+$(eval LOCAL_NOTICE_FILE := $(wildcard $(addprefix $(LOCAL_PATH)/$(1), /NOTICE /LICENSE)))\
 $(eval include $(BUILD_HYB))\
 $(eval include $(CLEAR_VARS))\
 $(eval LOCAL_MODULE := $(addprefix $(addprefix hyph-, $(2)), .lic.txt))\
@@ -83,7 +86,7 @@ $(eval LOCAL_MODULE_PATH := $(TARGET_OUT)/usr/hyphen-data)\
 $(eval include $(BUILD_PREBUILT))
 endef
 
-$(foreach l, $(pattern_locales), $(call build-one-pattern-module, $(dir $(l)), $(notdir $l)))
+$(foreach l, $(pattern_locales), $(call build-one-pattern-module,$(dir $(l)),$(notdir $l)))
 build-one-pattern-module :=
 pattern_locales :=
 
