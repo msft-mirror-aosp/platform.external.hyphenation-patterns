@@ -71,6 +71,7 @@ pattern_locales := \
     uk \
     und-ethi
 
-PRODUCT_PACKAGES := hyph-data
+PRODUCT_PACKAGES := $(addprefix hyph-,$(pattern_locales)) \
+    $(addsuffix .lic.txt,$(addprefix hyph-,$(pattern_locales)))
 
 pattern_locales :=
